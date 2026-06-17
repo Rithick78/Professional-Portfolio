@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700,800&f[]=satoshi@400,500,700&display=swap");
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "General Sans", "Inter", sans-serif;
+  --font-satoshi: "Satoshi", "Inter", sans-serif;
+
+  --color-brand-blue: #2563EB;
+  --color-brand-purple: #7C3AED;
+  --color-brand-cyan: #06B6D4;
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --radius-4xl: 1.5rem;
+
+  --animate-gradient-shift: gradientShift 6s ease infinite;
+  --animate-float-y: floatY 6s ease-in-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-pulse-glow: pulseGlow 4s ease-in-out infinite;
+  --animate-blink: blink 1.8s ease-in-out infinite;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-blob-1: blob1 22s ease-in-out infinite;
+  --animate-blob-2: blob2 27s ease-in-out infinite;
+  --animate-blob-3: blob3 32s ease-in-out infinite;
+}
+
+/* ── CSS TOKENS ── */
+:root {
+  --bg: #F8FAFC;
+  --card: oklch(1 0 0);
+  --text: #0F172A;
+  --soft: #64748B;
+  --softer: #94A3B8;
+  --border: oklch(0.922 0 0);
+  --border2: rgba(15, 23, 42, 0.13);
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-b: rgba(255, 255, 255, 0.5);
+  --g1: #2563EB;
+  --g2: #7C3AED;
+  --g3: #06B6D4;
+  --grad: linear-gradient(120deg, #2563EB, #7C3AED, #06B6D4);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(124, 58, 237, 0.18);
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --bg: #050816;
+  --card: oklch(0.205 0 0);
+  --text: #F8FAFC;
+  --soft: #94A3B8;
+  --softer: #64748B;
+  --border: oklch(1 0 0 / 10%);
+  --border2: rgba(248, 250, 252, 0.13);
+  --glass: rgba(15, 23, 42, 0.55);
+  --glass-b: rgba(248, 250, 252, 0.07);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 40px rgba(124, 58, 237, 0.35);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+  line-height: 1.6;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  border-radius: 100px;
+}
+
+/* ── GRADIENT TEXT ── */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ── REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* ── BACKGROUND BLOBS ── */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(110px);
+  will-change: transform;
+  pointer-events: none;
+  z-index: 0;
+}
+.blob-1 { width:520px; height:520px; left:-160px; top:-120px; background:#2563EB; opacity:0.13; animation:blob1 22s ease-in-out infinite; }
+.blob-2 { width:560px; height:560px; right:-180px; top:60px; background:#7C3AED; opacity:0.11; animation:blob2 27s ease-in-out infinite; }
+.blob-3 { width:460px; height:460px; left:28%; bottom:-180px; background:#06B6D4; opacity:0.09; animation:blob3 32s ease-in-out infinite; }
+.dark .blob-1 { opacity:0.25; }
+.dark .blob-2 { opacity:0.20; }
+.dark .blob-3 { opacity:0.18; }
+
+/* ── GRID OVERLAY ── */
+.grid-overlay {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(ellipse 85% 65% at 50% 35%, #000 25%, transparent 100%);
+  opacity: 0.55;
+}
+
+/* ── MARQUEE ── */
+.marquee-wrap { overflow: hidden; position: relative; }
+.marquee-wrap::before, .marquee-wrap::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; pointer-events: none;
+}
+.marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.marquee-wrap::after { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+.marquee-track { display: flex; gap: 14px; animation: marquee 28s linear infinite; width: max-content; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ── CODE CARD ── */
+.code-card { font-family: "JetBrains Mono","Fira Code","Courier New",monospace; font-size:11.5px; line-height:1.85; }
+.code-card .kw { color: var(--g2); font-weight: 600; }
+.code-card .fn { color: var(--g3); }
+.code-card .str { color: var(--g1); }
+.code-card .cm { color: var(--softer); font-style: italic; }
+
+/* ── PROFILE RING ── */
+.profile-ring { background: conic-gradient(from 0deg,#2563EB,#7C3AED,#06B6D4,#2563EB); }
+
+/* ── TIMELINE ── */
+.timeline-dot { width:12px; height:12px; border-radius:50%; border:2px solid var(--g2); background:var(--bg); flex-shrink:0; margin-top:4px; }
+
+/* ── SKILL BAR ── */
+.skill-bar-fill { height:100%; border-radius:100px; background:var(--grad); transform-origin:left; transform:scaleX(0); transition:transform 1s cubic-bezier(.2,.8,.2,1); }
+.skill-bar-fill.animate { transform:scaleX(1); }
+
+/* ── KEYFRAMES ── */
+@keyframes gradientShift { 0%,100%{background-position:0% center} 50%{background-position:100% center} }
+@keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+@keyframes pulseGlow { 0%,100%{opacity:.2;transform:scale(1)} 50%{opacity:.4;transform:scale(1.1)} }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes blob1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(55px,70px)} }
+@keyframes blob2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-60px,-45px)} }
+@keyframes blob3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(35px,-55px)} }
+@keyframes spin { to{transform:rotate(360deg)} }
+
