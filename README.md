@@ -111,11 +111,11 @@ rithick-portfolio/
 
 **Rithick Jackson**
 
-- 🌐 Portfolio: [your-portfolio-link.com](https://your-portfolio-link.com)
-- 💼 LinkedIn: [linkedin.com/in/rithickjackson](https://www.linkedin.com/in/rithickjackson/)
-- 🐙 GitHub: [github.com/Rithick78](https://github.com/Rithick78)
-- 📧 Email: [rithickjacksonv@gmail.com](mailto:rithickjacksonv@gmail.com)
-- 🧩 LeetCode: [leetcode.com/u/Rithick-jackson](https://leetcode.com/u/Rithick-jackson/)
+- 🌐 [Portfolio](https://your-portfolio-link.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/rithickjackson/)
+- 🐙 [GitHub](https://github.com/Rithick78)
+- 📧 [Email](mailto:rithickjacksonv@gmail.com)
+- 🧩 [LeetCode](https://leetcode.com/u/Rithick-jackson/)
 
 ---
 
