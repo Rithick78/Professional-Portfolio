@@ -1,4 +1,4 @@
-# 🚀 Rithick Jackson — Developer Portfolio
+# 🚀 Rithick Jackson — Software Developer
 
 <div align="center">
 
