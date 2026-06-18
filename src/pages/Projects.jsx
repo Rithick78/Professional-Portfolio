@@ -38,19 +38,21 @@ const projects = [
   {
     id: 1,
     title: "FoodBill Pro",
-    desc: "",
-    long: "",
+    image: "/FoodBill.png",
+    desc: "A smart digital menu and billing system for food businesses. Customers see real-time stock availability — no more ordering unavailable items.",
+    long: "FoodBill Pro eliminates the frustration of ordering out-of-stock food items by providing a live digital menu where customers instantly see what's available. Admins can add, edit, delete menu items, and mark items as out-of-stock in real time. The built-in billing system lets admins manage the full order flow — from menu to bill generation — reducing customer wait time and improving the overall dining experience.",
     tags: ["Java", "Spring Boot", "React", "Tailwind", "MySQL", "Redux"],
     category: "Full Stack",
     github: "https://github.com/Rithick78/FoodBillPro--Backend",
     live: "#",
     featured: true,
     accentColor: "#2563EB",
-    features: ["JWT Auth", "Admin Dashboard", "Real-time Stock", "Billing System"],
+    features: ["JWT Auth", "Admin Dashboard", "Live Stock Status", "Billing System", "Digital Menu"],
   },
   {
     id: 2,
     title: "CareerScan",
+    image: "/Careerscan.png",
     desc: "Spring Boot REST API that powers AI-based job matching using resume parsing, live job search, and skill overlap scoring.",
     long: "Automatically parses resumes, extracts skills and experience, searches live job listings, and calculates match scores based on skill overlap. Provides personalized job recommendations, helping users quickly identify opportunities that align with their qualifications and career goals.",
     tags: ["Java", "Spring Boot", "React", "Tailwind", "MySQL", "Redux", "ShadCN"],
@@ -64,6 +66,7 @@ const projects = [
   {
     id: 3,
     title: "AI-ResumeBuilder",
+    image: "/Resume.png",
     desc: "AI-powered resume builder that helps users create professional resumes with personalized content and modern templates.",
     long: "Generates tailored resume content using AI, provides real-time resume previews, and supports customizable themes for personalization. Includes secure user accounts, resume management, and one-click download and sharing features, enabling users to create polished resumes quickly and efficiently.",
     tags: ["React", "ShadCN", "Tailwind"],
@@ -77,6 +80,7 @@ const projects = [
   {
     id: 4,
     title: "AI-MockInterview",
+    image: "/Mock.png",
     desc: "AI-powered mock interview platform that helps users improve interview performance through realistic practice sessions and instant feedback.",
     long: "Simulates real interview experiences with interactive question-and-answer sessions, webcam-based practice, and text-to-speech capabilities. Provides instant performance ratings, personalized corrective feedback, and progress insights to help users strengthen communication skills, identify improvement areas, and build confidence for real-world interviews.",
     tags: ["Next.js", "ShadCN", "Tailwind"],
@@ -90,6 +94,7 @@ const projects = [
   {
     id: 5,
     title: "Animated-Portfolio",
+    image: "/PersonalPorfolio.png",
     desc: "Modern developer portfolio showcasing projects, technical expertise, and achievements through an engaging and responsive user experience.",
     long: "Features interactive project showcases, smooth animations, and a clean, professional design that highlights technical skills and accomplishments. Optimized for seamless performance across desktop, tablet, and mobile devices, providing an intuitive browsing experience while maintaining a scalable and maintainable architecture.",
     tags: ["Next.js", "ShadCN", "React Bits", "Aceternity UI"],
@@ -103,6 +108,7 @@ const projects = [
   {
     id: 6,
     title: "Todo List Application",
+    image: "/Todo.png",
     desc: "Task management application designed to organize daily activities through a simple and intuitive user experience.",
     long: "Provides complete task management functionality, allowing users to create, view, update, and delete tasks efficiently. Features a clean and responsive interface, organized workflows, and component-based architecture to deliver a smooth and productive experience across desktop and mobile devices.",
     tags: ["React", "CSS"],
@@ -116,6 +122,7 @@ const projects = [
   {
     id: 7,
     title: "Weather Application",
+    image: "/Weather.png",
     desc: "Real-time weather application that provides current weather conditions and temperature updates for locations worldwide.",
     long: "Allows users to search weather information by city name and instantly view current temperature and weather conditions. Integrates live weather data retrieval, responsive layouts, and an intuitive user interface to deliver accurate and accessible weather updates across desktop and mobile devices.",
     tags: ["React", "CSS"],
@@ -129,6 +136,7 @@ const projects = [
   {
     id: 8,
     title: "First Portfolio",
+    image: "/Portfolio.png",
     desc: "Personal portfolio website built to showcase projects, skills, and learning progress through a clean and responsive interface.",
     long: "Developed as part of a web development learning journey, featuring project highlights, technical skills, and a structured presentation of work. Emphasized component-based design, responsive layouts, and user-friendly navigation to deliver a consistent experience across desktop, tablet, and mobile devices.",
     tags: ["React", "CSS"],
@@ -198,6 +206,13 @@ function FeaturedCard({ project }) {
           background: `linear-gradient(135deg, ${project.accentColor}15, rgba(124,58,237,0.12), rgba(6,182,212,0.08))`,
         }}
       >
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+        )}
         {/* Featured badge */}
         <div
           className="absolute top-3 left-3 flex items-center gap-1.5 text-[10px] md:text-[11px] font-bold px-2.5 py-1 md:px-3 md:py-1.5 rounded-full"
@@ -330,7 +345,7 @@ function SmallCard({ project, index }) {
       transition={{ delay: index * 0.1, duration: 0.55, ease: [0.2, 0.8, 0.2, 1] }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative rounded-[18px] md:rounded-3xl p-4 md:p-5 flex flex-col gap-3 md:gap-4"
+      className="relative rounded-[18px] md:rounded-3xl overflow-hidden flex flex-col"
       style={{
         background: "var(--card)",
         border: `1px solid ${hovered ? project.accentColor + "40" : "var(--border)"}`,
@@ -339,23 +354,36 @@ function SmallCard({ project, index }) {
         transform: hovered ? "translateY(-4px)" : "translateY(0)",
       }}
     >
-      {/* Top row */}
-      <div className="flex items-start justify-between gap-2">
-        <div
-          className="w-9 h-9 md:w-11 md:h-11 rounded-[10px] md:rounded-xl flex items-center justify-center shrink-0"
-          style={{
-            background: `${project.accentColor}14`,
-            border: `1px solid ${project.accentColor}28`,
-          }}
-        >
-          {project.tags[0] && tagIconMap[project.tags[0]] ? (
-            (() => {
+      {/* ── IMAGE AREA ── */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{
+          height: "140px",
+          background: `linear-gradient(135deg, ${project.accentColor}15, rgba(124,58,237,0.12), rgba(6,182,212,0.08))`,
+          flexShrink: 0,
+        }}
+      >
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+            style={{
+              transition: "transform 0.4s ease",
+              transform: hovered ? "scale(1.05)" : "scale(1)",
+            }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            {project.tags[0] && tagIconMap[project.tags[0]] && (() => {
               const Icon = tagIconMap[project.tags[0]];
-              return <Icon size={18} color={project.accentColor} />;
-            })()
-          ) : null}
-        </div>
-        <div className="flex gap-1.5">
+              return <Icon size={36} color={`${project.accentColor}40`} />;
+            })()}
+          </div>
+        )}
+
+        {/* Links — top right */}
+        <div className="absolute top-2.5 right-2.5 flex gap-1.5">
 
           <a href={project.github}
             target="_blank"
@@ -364,7 +392,7 @@ function SmallCard({ project, index }) {
             style={{
               border: "1px solid var(--border)",
               color: "var(--soft)",
-              background: "transparent",
+              background: "var(--card)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "var(--g2)";
@@ -387,29 +415,31 @@ function SmallCard({ project, index }) {
             <ExternalLink size={12} />
           </a>
         </div>
-      </div>
+      </div >
 
-      {/* Content */}
-      <div>
-        <h3
-          className="font-display font-bold text-[14px] md:text-[15px] mb-1"
-          style={{ color: "var(--text)" }}
-        >
-          {project.title}
-        </h3>
-        <p
-          className="text-[12px] md:text-[12.5px] leading-relaxed"
-          style={{ color: "var(--soft)" }}
-        >
-          {project.desc}
-        </p>
-      </div>
+      {/* ── CONTENT ── */}
+      < div className="p-4 md:p-5 flex flex-col gap-3 flex-1" >
+        <div>
+          <h3
+            className="font-display font-bold text-[14px] md:text-[15px] mb-1"
+            style={{ color: "var(--text)" }}
+          >
+            {project.title}
+          </h3>
+          <p
+            className="text-[12px] md:text-[12.5px] leading-relaxed"
+            style={{ color: "var(--soft)" }}
+          >
+            {project.desc}
+          </p>
+        </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-1 md:gap-1.5 mt-auto">
-        {project.tags.map((t) => <TagChip key={t} tag={t} />)}
-      </div>
-    </motion.div>
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1 md:gap-1.5 mt-auto">
+          {project.tags.map((t) => <TagChip key={t} tag={t} />)}
+        </div>
+      </div >
+    </motion.div >
   );
 }
 

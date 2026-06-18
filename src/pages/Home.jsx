@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { useRevealAll } from "@/hooks/useReveal";
 import {
-  FaLaptopCode,
+  FaLaptopCode,  
   FaServer,
   FaMobileAlt,
   FaDatabase,

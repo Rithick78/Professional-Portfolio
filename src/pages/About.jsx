@@ -33,7 +33,7 @@ const timeline = [
     year: "Sep 2025 — Mar 2026",
     role: "Frontend Developer Intern",
     company: "Exordium DCA",
-    desc: "Developed and maintained React.js applications, implementing reusable UI components and seamless API integrations.",
+    desc: "Developed and maintained scalable React.js applications, delivering reusable UI components, seamless API integrations, and collaborating effectively with a team of 3 developers using GitLab-based workflows.",
   },
 ];
 
