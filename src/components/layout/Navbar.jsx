@@ -92,6 +92,8 @@ export default function Navbar() {
           {/* Resume */}
           <motion.a
             href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
             whileHover={{ y: -1 }}
             whileTap={{ scale: 0.97 }}
             className="hidden sm:flex text-[13px] font-bold px-5 py-2 rounded-full no-underline transition-all duration-300"
