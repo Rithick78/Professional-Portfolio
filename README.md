@@ -11,7 +11,7 @@
 
 **A premium, fully responsive developer portfolio built with React, Vite, Tailwind CSS v4, and Framer Motion.**
 
-[🌐 Live Demo](https://rithickjacksonportfolio7.netlify.app/) · [📧 Contact](mailto:rithickjacksonv@gmail.com) · [💼 LinkedIn](https://www.linkedin.com/in/rithickjackson/)
+[🌐 Live Demo](https://rithickjackson.netlify.app/) · [📧 Contact](mailto:rithickjacksonv@gmail.com) · [💼 LinkedIn](https://www.linkedin.com/in/rithickjackson/)
 
 </div>
 
