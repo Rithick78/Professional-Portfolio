@@ -31,7 +31,7 @@ const techStack = [
 const timeline = [
   {
     year: "Sep 2025 — Mar 2026",
-    role: "Frontend Developer Intern",
+    role: "Software Developer Intern",
     company: "Exordium DCA",
     desc: "Developed and maintained scalable React.js applications, delivering reusable UI components, seamless API integrations, and collaborating effectively with a team of 3 developers using GitLab-based workflows.",
   },

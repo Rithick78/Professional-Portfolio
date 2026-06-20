@@ -44,7 +44,7 @@ const projects = [
     tags: ["Java", "Spring Boot", "React", "Tailwind", "MySQL", "Redux"],
     category: "Full Stack",
     github: "https://github.com/Rithick78/FoodBillPro--Backend",
-    live: "#",
+    live: "https://foodbillpro.netlify.app/",
     featured: true,
     accentColor: "#2563EB",
     features: ["JWT Auth", "Admin Dashboard", "Live Stock Status", "Billing System", "Digital Menu"],

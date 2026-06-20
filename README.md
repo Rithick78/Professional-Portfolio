@@ -11,7 +11,7 @@
 
 **A premium, fully responsive developer portfolio built with React, Vite, Tailwind CSS v4, and Framer Motion.**
 
-[🌐 Live Demo](https://your-portfolio-link.com) · [📧 Contact](mailto:rithickjacksonv@gmail.com) · [💼 LinkedIn](https://www.linkedin.com/in/rithickjackson/)
+[🌐 Live Demo](https://rithickjacksonportfolio7.netlify.app/) · [📧 Contact](mailto:rithickjacksonv@gmail.com) · [💼 LinkedIn](https://www.linkedin.com/in/rithickjackson/)
 
 </div>
 
@@ -111,11 +111,11 @@ rithick-portfolio/
 
 **Rithick Jackson**
 
-- 🌐 Portfolio: [your-portfolio-link.com](https://your-portfolio-link.com)
-- 💼 LinkedIn: [linkedin.com/in/rithickjackson](https://www.linkedin.com/in/rithickjackson/)
-- 🐙 GitHub: [github.com/Rithick78](https://github.com/Rithick78)
-- 📧 Email: [rithickjacksonv@gmail.com](mailto:rithickjacksonv@gmail.com)
-- 🧩 LeetCode: [leetcode.com/u/Rithick-jackson](https://leetcode.com/u/Rithick-jackson/)
+- 🌐 [Portfolio](https://rithickjacksonportfolio7.netlify.app/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/rithickjackson/)
+- 🐙 [GitHub](https://github.com/Rithick78)
+- 📧 [rithickjacksonv@gmail.com](mailto:rithickjacksonv@gmail.com)
+- 🧩 [Leetcode](https://leetcode.com/u/Rithick-jackson/)
 
 ---
 

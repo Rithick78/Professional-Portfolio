@@ -13,6 +13,7 @@ import {
 import { VscVscode } from "react-icons/vsc";
 import { FiDatabase } from "react-icons/fi";
 import { BiLogoSpringBoot } from "react-icons/bi";
+import { FaDocker } from "react-icons/fa6";
 
 const categories = ["All", "Frontend", "Backend", "Database", "Tools"];
 
@@ -32,6 +33,7 @@ const skills = [
   { name: "Maven", icon: SiApachemaven, color: "#EF4444", category: "Backend", builtWith: "Build tool for all Java projects" },
   { name: "MySQL", icon: SiMysql, color: "#2563EB", category: "Database", builtWith: "Primary DB for all projects" },
   { name: "SQL", icon: FiDatabase, color: "#06B6D4", category: "Database", builtWith: "Database Design & Management" },
+  { name: "Docker", icon: FaDocker, color: "#06B6D4", category: "Tools", builtWith: "Containerized and deployed using Docker" },
   { name: "Git", icon: FaGitAlt, color: "#EF4444", category: "Tools", builtWith: "Version control, 600+ commits" },
   { name: "GitHub", icon: FaGithub, color: "#6B7280", category: "Tools", builtWith: "All project repos & collaboration" },
   { name: "Postman", icon: SiPostman, color: "#EF4444", category: "Tools", builtWith: "API testing & documentation" },
