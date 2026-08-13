@@ -74,12 +74,6 @@ const services = [
     desc: "JWT, Spring Security & role-based access control systems.",
     icon: <FaShieldAlt size={20} />,
   },
-  {
-    color: "#06B6D4",
-    title: "Performance Tuning",
-    desc: "Query optimization, lazy loading & Lighthouse 95+ scores.",
-    icon: <FaTachometerAlt size={20} />,
-  },
 ];
 
 const techPills = [
@@ -112,8 +106,8 @@ const techPills = [
 const stats = [
   { num: "8+", label: "Projects Built" },
   { num: "1.5yrs", label: "Years Coding" },
-  { num: "600+", label: "GitHub Commits" },
-  { num: "200+", label: "DSA Problems" },
+  { num: "700+", label: "GitHub Commits" },
+  { num: "400+", label: "DSA Problems" },
 ];
 
 function ServiceCard({ icon, title, desc, color }) {

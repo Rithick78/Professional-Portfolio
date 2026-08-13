@@ -39,13 +39,13 @@ const timeline = [
 
 const certifications = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Development",
     issuer: "Green's Technology Chennai · 2024",
     icon: FaCertificate,
     color: "#2563EB",
   },
   {
-    title: "LeetCode 150+",
+    title: "LeetCode 250+",
     issuer: "Data Structures & Algorithms",
     icon: SiLeetcode,
     color: "#F89F1B",
