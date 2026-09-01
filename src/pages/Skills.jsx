@@ -9,10 +9,11 @@ import {
   SiTailwindcss, SiJavascript, SiPostman, SiVite, SiIntellijidea, SiApachemaven,
   SiShadcnui,
   SiSpringsecurity,
+  SiJunit5,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FiDatabase } from "react-icons/fi";
-import { BiLogoSpringBoot } from "react-icons/bi";
+import { BiLogoSpringBoot, BiSolidDrink } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa6";
 
 const categories = ["All", "Frontend", "Backend", "Database", "Tools"];
@@ -39,6 +40,8 @@ const skills = [
   { name: "Postman", icon: SiPostman, color: "#EF4444", category: "Tools", builtWith: "API testing & documentation" },
   { name: "VS Code", icon: VscVscode, color: "#2563EB", category: "Tools", builtWith: "Primary editor for all frontend" },
   { name: "IntelliJ", icon: SiIntellijidea, color: "#EF4444", category: "Tools", builtWith: "Primary IDE for Java/Spring Boot" },
+  {name: "JUnit 5", icon: SiJunit5, color: "#25A162", category: "Backend", builtWith: "Unit Testing for Java & Spring Boot"},
+  {name: "Mockito", icon: BiSolidDrink, color: "#4CAF50", category: "Backend", builtWith: "Mocking Dependencies & Unit Tests"},
 ];
 
 function SkillCard({ name, icon: Icon, color, builtWith, index }) {
